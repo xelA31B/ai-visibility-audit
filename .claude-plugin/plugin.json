@@ -1,0 +1,11 @@
+{
+  "name": "ai-visibility-audit-pro",
+  "version": "0.1.0",
+  "description": "Pro AI visibility audit: asks ChatGPT and Perplexity directly through their APIs, compares real answers and cited sources with Claude's view, scores the brand vs competitors and prepares fixes. Requires your own OpenAI and/or Perplexity API keys.",
+  "author": {
+    "name": "xelA31B"
+  },
+  "repository": "https://github.com/xelA31B/noozex-site/tree/claude-plugins/claude-plugins",
+  "license": "MIT",
+  "keywords": ["geo", "aeo", "ai-search", "ai-visibility", "chatgpt", "perplexity", "audit"]
+}
