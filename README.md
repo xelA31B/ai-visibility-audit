@@ -21,6 +21,16 @@
 /plugin install ai-visibility-audit@ai-visibility-audit
 ```
 
+## Commands
+
+Type `/` in Claude and pick a command:
+
+| Command | What it does |
+|---|---|
+| `/geo-audit [company] [website] [market]` | AI visibility (GEO) audit of a brand |
+| `/geo-bot-check [website]` | Check which AI bots can access a website |
+| `/geo-fixes [website or audit]` | Ready-to-paste GEO fixes: llms.txt, schema, FAQ, robots.txt |
+
 ## How to use
 
 Just ask Claude, in any language:

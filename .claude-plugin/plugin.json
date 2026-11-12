@@ -1,7 +1,7 @@
 {
   "name": "ai-visibility-audit",
   "displayName": "AI Visibility & GEO Audit",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "GEO / AEO audit: see how a brand shows up in AI assistants (ChatGPT, Claude, Perplexity, Gemini) — AI answer check, cited sources, competitor comparison, site readiness for AI bots (robots.txt, llms.txt, schema) and ready-to-use fixes. Plain or professional reports, in the user's language.",
   "author": {
     "name": "xelA31B"
