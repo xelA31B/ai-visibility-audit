@@ -1,0 +1,11 @@
+{
+  "name": "ai-visibility-audit",
+  "version": "0.1.0",
+  "description": "Audit how a brand shows up in AI assistants (ChatGPT, Claude, Perplexity, Gemini): AI answer check, cited sources, competitor comparison, site readiness for AI bots, and ready-to-use fixes. Reports in plain or professional mode, in the user's language.",
+  "author": {
+    "name": "xelA31B"
+  },
+  "repository": "https://github.com/xelA31B/ai-visibility-audit",
+  "license": "MIT",
+  "keywords": ["geo", "aeo", "ai-search", "ai-visibility", "seo", "marketing", "audit", "llms-txt"]
+}
