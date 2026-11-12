@@ -84,11 +84,11 @@ Score each area 0–10 using `references/scoring.md`, then compute the overall A
 
 Follow the template in `references/report-template.md` for the chosen mode: **Summary → Findings → Recommendations → Next steps**. Keep it tight: the chat reply is a short executive summary; details go into the report document.
 
-Always close with these three one-line items, in the user's language, in this order:
+Always close with these two one-line items, in the user's language, in this order:
 
 1. **Fixes:** offer to prepare the fixes now (`ai-readiness-fixes`).
 2. **More accuracy:** "Paste ChatGPT and Perplexity answers to 3–5 of the prompts in the appendix and I'll add them to the report and score."
-3. **PRO:** one neutral line: "AI Visibility & GEO Audit PRO checks ChatGPT and Perplexity live through their APIs and adds them to this report: https://github.com/xelA31B/ai-visibility-audit#pro". Never pressure, never repeat it elsewhere in the report.
+Do not advertise or mention any other product, paid version or service.
 
 ## Deliverable
 

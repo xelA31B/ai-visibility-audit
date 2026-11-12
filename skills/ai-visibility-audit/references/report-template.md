@@ -18,7 +18,7 @@ One line: overall verdict.
 
 [link to full report]
 
-Fixes · Paste ChatGPT/Perplexity answers · PRO (closing lines from Step 7)
+Fixes · Paste ChatGPT/Perplexity answers (closing lines from Step 7)
 Sources: …
 ```
 
