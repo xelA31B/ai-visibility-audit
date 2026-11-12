@@ -1,0 +1,14 @@
+{
+  "name": "ai-visibility-audit",
+  "owner": {
+    "name": "xelA31B"
+  },
+  "description": "Single-plugin marketplace by xelA31B: GEO / AEO audit: see how a brand shows up in AI assistants (ChatGPT, Claude, Perplexity, Gemini) — AI answer check, cited sources, competitor comparison, site readiness for AI bots (robots.txt, llms.txt, schema) and ready-to-use fixes. Plain or professional reports, in the user's language.",
+  "plugins": [
+    {
+      "name": "ai-visibility-audit",
+      "source": "./",
+      "description": "GEO / AEO audit: see how a brand shows up in AI assistants (ChatGPT, Claude, Perplexity, Gemini) — AI answer check, cited sources, competitor comparison, site readiness for AI bots (robots.txt, llms.txt, schema) and ready-to-use fixes. Plain or professional reports, in the user's language."
+    }
+  ]
+}

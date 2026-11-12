@@ -12,7 +12,14 @@
 
 ## Install
 
-Add it from the Claude directory (claude.ai/directory) once published, or upload the `.plugin` file from the Releases page.
+**Claude app (web, desktop):** Plugins → add a marketplace from a GitHub repository → `xelA31B/ai-visibility-audit` → install **AI Visibility & GEO Audit**. Once approved in the Claude directory, search for **AI Visibility & GEO Audit** in Plugins.
+
+**Claude Code (VS Code or terminal):**
+
+```
+/plugin marketplace add xelA31B/ai-visibility-audit
+/plugin install ai-visibility-audit@ai-visibility-audit
+```
 
 ## How to use
 
