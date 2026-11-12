@@ -1,6 +1,6 @@
-# AI Visibility Audit — Claude plugin
+# AI Visibility & GEO Audit — Claude plugin
 
-Find out how your brand shows up in AI assistants (ChatGPT, Claude, Perplexity, Gemini) and get a concrete plan to be mentioned and recommended more often.
+**GEO (Generative Engine Optimization) / AEO audit.** Find out how your brand shows up in AI assistants (ChatGPT, Claude, Perplexity, Gemini) and get a concrete plan to be mentioned and recommended more often.
 
 ## What it does
 
