@@ -7,5 +7,15 @@
   },
   "repository": "https://github.com/xelA31B/ai-visibility-audit",
   "license": "MIT",
-  "keywords": ["geo", "aeo", "ai-search", "ai-visibility", "seo", "marketing", "audit", "llms-txt"]
+  "keywords": [
+    "geo",
+    "aeo",
+    "ai-search",
+    "ai-visibility",
+    "seo",
+    "marketing",
+    "audit",
+    "llms-txt"
+  ],
+  "icon": ".claude-plugin/icon.png"
 }
