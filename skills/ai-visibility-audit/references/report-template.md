@@ -1,62 +1,87 @@
 # Report templates
 
-Write in the user's language. Translate headings.
+Business style. Write in the user's language and translate headings. Bullets and tables, no narrative paragraphs. Every finding ≤ 1 line where possible.
 
-## Simple mode (business owner)
+## Chat reply (both modes)
 
 ```
-# How AI assistants see [Brand]
-Date · Market
+**[Brand] — AI Visibility Score: X/100** (date)
+One line: overall verdict.
 
-## In short
-2–3 sentences: overall score (X/100), whether AI recommends the brand, the single biggest problem.
+**Key findings**
+- 3–5 bullets, most important first
 
-## What AI says about you
-3–5 bullets in plain words. Quote nothing longer than one short sentence.
+**Top 3 actions**
+1. Action — impact
+2. …
+3. …
 
-## Who AI recommends instead
-Competitors that appear more often, and why (in one line each).
+[link to full report]
 
-## Top 5 things to do
-1. Action — why it matters — effort (low/medium/high)
-...
-
-## What I can do next
-One line offer: prepare the fixes (texts, FAQ, technical files) or re-check in 30 days.
+Fixes · Paste ChatGPT/Perplexity answers · PRO (closing lines from Step 7)
+Sources: …
 ```
 
-## Pro mode (marketer / agency)
+## Simple mode — report document (1 page)
 
 ```
 # AI Visibility Audit — [Brand]
-Date · Market · Prepared by [user / agency name if given]
+Date · Market · Score X/100
 
-## Executive summary
-Overall AI Visibility Score, comparison to competitors, 3 key findings, 3 priority actions.
+## 1. Summary
+2–3 bullets: score, where the brand appears / does not appear, main risk.
 
-## Scorecard
-Table: Area | Score | Weight | Evidence status (checked / user-provided / estimate) | Key finding
+## 2. Findings
+| Area | Status | Finding |
+|------|--------|---------|
+| AI answers | ✅/⚠️/❌ | … |
+| Accuracy of information | … | … |
+| Reviews & listings | … | … |
+| Website | … | … |
+| AI bot access | … | … |
+| Competitors | … | … |
 
-## AI answer analysis
-Table: Prompt | Type | Brand mentioned | Position | Competitors mentioned | Main sources
-Short commentary on patterns (which prompt types the brand wins/loses).
+## 3. Recommendations
+| # | Action | Why | Effort |
+|---|--------|-----|--------|
+| 1 | … | … | Low/Med/High |
+(max 5 rows, priority order)
 
-## Competitor comparison
-Table: Brand | Mentions (of N prompts) | Avg position | Strongest sources | Est. score
+## 4. Limitations
+One line: what was not checked and how to complete it.
+```
 
-## Cited sources & off-site presence
-Which sources AI relies on for this niche; where the brand is present/absent.
+## Pro mode — report document (≤ 2 pages + appendix)
 
-## Site readiness for AI
-AI bot access table (from ai-bot-access-check), llms.txt, sitemap, structured data, content clarity, rendering.
+```
+# AI Visibility & GEO Audit — [Brand]
+Date · Market · Prepared by [user / agency if given]
 
-## Action plan
-Table: # | Action | Why | Effort | Impact | Owner (suggested)
-Group into: Quick wins (this week) · Next 30 days · Ongoing.
+## 1. Executive summary
+- AI Visibility Score X/100 (vs competitors: A …, B …)
+- 3 key findings
+- 3 priority actions
 
-## Methodology & limitations
-Prompt list, tools used, what was not checked, note that AI answers vary between sessions and models.
+## 2. Scorecard
+| Area | Score | Weight | Evidence | Key finding |
+
+## 3. Findings
+### 3.1 AI answers
+| Prompt | Type | Mentioned | Position | Competitors | Main sources |
+### 3.2 Information accuracy
+Bullets: incorrect / outdated / conflicting facts and where they come from.
+### 3.3 Off-site presence
+| Source | Brand | Competitor A | Competitor B |
+### 3.4 Website & AI bot access
+| Check | Result |
+
+## 4. Recommendations
+| # | Action | Why | Effort | Impact | Timing |
+Timing: This week · 30 days · Ongoing.
+
+## 5. Methodology & limitations
+Bullets: tools used, what was not checked, AI answers vary by session/model.
 
 ## Appendix
-Full prompt list; user-provided AI answers (if any).
+Prompt list · user-provided AI answers.
 ```

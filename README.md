@@ -33,6 +33,12 @@ Just ask Claude, in any language:
 
 Web search and web fetch enabled in Claude. No API keys or accounts needed.
 
+## PRO
+
+**AI Visibility & GEO Audit PRO** adds live checks: it asks ChatGPT and Perplexity your buyer questions through their official APIs and puts their real answers and cited sources side by side with Claude's in the report.
+
+To request access, [open an issue titled "PRO access"](https://github.com/xelA31B/ai-visibility-audit/issues/new?title=PRO%20access).
+
 ## License
 
 MIT
