@@ -1,3 +1,10 @@
+# Branded report template
+
+Use this design when the environment can render an HTML artifact or file. Copy the HTML below, fill every `{{PLACEHOLDER}}`, repeat the marked rows as needed and keep the colours and layout. It is static HTML and CSS only — do not add scripts.
+
+Status classes: `ok` (pass / install), `warn` (conditions / partial), `bad` (fail / do not install), `na` (not checked / not available). Set the score ring with `style="--v:SCORE"` (0–100).
+
+```html
 <!DOCTYPE html>
 <!--
   Branded report template (xelA31B plugin family). Static HTML and CSS only.
@@ -96,3 +103,4 @@
   </main>
 </body>
 </html>
+```

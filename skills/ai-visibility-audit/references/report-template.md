@@ -1,87 +1,106 @@
-# Report templates
+# Branded report template
 
-Business style. Write in the user's language and translate headings. Bullets and tables, no narrative paragraphs. Every finding ≤ 1 line where possible.
+Use this design when the environment can render an HTML artifact or file. Copy the HTML below, fill every `{{PLACEHOLDER}}`, repeat the marked rows as needed and keep the colours and layout. It is static HTML and CSS only — do not add scripts.
 
-## Chat reply (both modes)
+Status classes: `ok` (pass / install), `warn` (conditions / partial), `bad` (fail / do not install), `na` (not checked / not available). Set the score ring with `style="--v:SCORE"` (0–100).
 
-```
-**[Brand] — AI Visibility Score: X/100** (date)
-One line: overall verdict.
+```html
+<!DOCTYPE html>
+<!--
+  Branded report template (xelA31B plugin family). Static HTML and CSS only.
+  Fill the {{PLACEHOLDERS}}; repeat the marked rows as needed; keep the design tokens.
+  Status classes: ok (pass/install), warn (conditions), bad (fail/do not install), na (not available).
+-->
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+  :root{
+    --navy:#1C1E4E; --teal:#0E7480; --gold:#FFC448; --ink:#14162F; --muted:#5B6275;
+    --bg:#F6F7FB; --card:#FFFFFF; --line:#E3E6EF;
+    --ok:#1F9D63; --warn:#E0A000; --bad:#D64545; --na:#8A90A2;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+  .hero{background:linear-gradient(160deg,var(--navy),var(--teal));color:#fff;padding:32px 28px 28px}
+  .hero .brand{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+  .hero h1{margin:6px 0 4px;font-size:26px}
+  .hero .meta{opacity:.85;font-size:14px}
+  .wrap{max-width:980px;margin:-18px auto 40px;padding:0 16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+  .summary{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .ring{--v:0;width:120px;height:120px;border-radius:50%;
+        background:conic-gradient(var(--teal) calc(var(--v)*1%),var(--line) 0);
+        display:grid;place-items:center;flex:none}
+  .ring span{width:92px;height:92px;border-radius:50%;background:#fff;display:grid;place-items:center;
+             font-size:28px;font-weight:700;color:var(--navy)}
+  .verdict{font-size:20px;font-weight:700}
+  .chip{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600;color:#fff}
+  .ok{background:var(--ok)} .warn{background:var(--warn)} .bad{background:var(--bad)} .na{background:var(--na)}
+  h2{font-size:16px;margin:0 0 12px;color:var(--navy)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;color:var(--muted);font-weight:600;border-bottom:2px solid var(--line);padding:8px 6px}
+  td{border-bottom:1px solid var(--line);padding:8px 6px;vertical-align:top}
+  code{background:#EEF1F7;padding:1px 5px;border-radius:5px;font-size:12.5px}
+  ul{margin:6px 0 0 18px;padding:0}
+  .foot{color:var(--muted);font-size:12px;text-align:center;margin-top:20px}
+  .accent{color:var(--gold)}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="brand">{{PLUGIN_NAME}} <span class="accent">✦</span></div>
+    <h1>{{TITLE}}</h1>
+    <div class="meta">{{SUBJECT}} · {{DATE}}</div>
+  </header>
 
-**Key findings**
-- 3–5 bullets, most important first
+  <main class="wrap">
+    <section class="card summary">
+      <div class="ring" style="--v:{{SCORE}}"><span>{{SCORE}}</span></div>
+      <div>
+        <div class="verdict">{{VERDICT_ICON}} {{VERDICT}}</div>
+        <div>{{ONE_LINE_REASON}}</div>
+        <ul>
+          <!-- repeat: key point -->
+          <li>{{KEY_POINT}}</li>
+        </ul>
+      </div>
+    </section>
 
-**Top 3 actions**
-1. Action — impact
-2. …
-3. …
+    <section class="card">
+      <h2>{{SECTION_SIGNALS_TITLE}}</h2>
+      <table>
+        <thead><tr><th>{{COL_SOURCE}}</th><th>{{COL_RESULT}}</th><th>{{COL_EVIDENCE}}</th></tr></thead>
+        <tbody>
+          <!-- repeat: one row per source -->
+          <tr><td>{{SOURCE}}</td><td><span class="chip {{STATUS_CLASS}}">{{STATUS}}</span> {{RESULT}}</td><td><code>{{EVIDENCE}}</code></td></tr>
+        </tbody>
+      </table>
+    </section>
 
-[link to full report]
+    <section class="card">
+      <h2>{{SECTION_FINDINGS_TITLE}}</h2>
+      <table>
+        <thead><tr><th>#</th><th>{{COL_SEVERITY}}</th><th>{{COL_FINDING}}</th><th>{{COL_EVIDENCE}}</th><th>{{COL_FIX}}</th></tr></thead>
+        <tbody>
+          <!-- repeat: one row per finding -->
+          <tr><td>{{N}}</td><td><span class="chip {{STATUS_CLASS}}">{{SEVERITY}}</span></td><td>{{FINDING}}</td><td><code>{{EVIDENCE}}</code></td><td>{{FIX}}</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-Fixes · Paste ChatGPT/Perplexity answers (closing lines from Step 7)
-Sources: …
-```
+    <section class="card">
+      <h2>{{SECTION_NEXT_TITLE}}</h2>
+      <ul>
+        <!-- repeat: next step / not available item -->
+        <li>{{NEXT_STEP}}</li>
+      </ul>
+    </section>
 
-## Simple mode — report document (1 page)
-
-```
-# AI Visibility Audit — [Brand]
-Date · Market · Score X/100
-
-## 1. Summary
-2–3 bullets: score, where the brand appears / does not appear, main risk.
-
-## 2. Findings
-| Area | Status | Finding |
-|------|--------|---------|
-| AI answers | ✅/⚠️/❌ | … |
-| Accuracy of information | … | … |
-| Reviews & listings | … | … |
-| Website | … | … |
-| AI bot access | … | … |
-| Competitors | … | … |
-
-## 3. Recommendations
-| # | Action | Why | Effort |
-|---|--------|-----|--------|
-| 1 | … | … | Low/Med/High |
-(max 5 rows, priority order)
-
-## 4. Limitations
-One line: what was not checked and how to complete it.
-```
-
-## Pro mode — report document (≤ 2 pages + appendix)
-
-```
-# AI Visibility & GEO Audit — [Brand]
-Date · Market · Prepared by [user / agency if given]
-
-## 1. Executive summary
-- AI Visibility Score X/100 (vs competitors: A …, B …)
-- 3 key findings
-- 3 priority actions
-
-## 2. Scorecard
-| Area | Score | Weight | Evidence | Key finding |
-
-## 3. Findings
-### 3.1 AI answers
-| Prompt | Type | Mentioned | Position | Competitors | Main sources |
-### 3.2 Information accuracy
-Bullets: incorrect / outdated / conflicting facts and where they come from.
-### 3.3 Off-site presence
-| Source | Brand | Competitor A | Competitor B |
-### 3.4 Website & AI bot access
-| Check | Result |
-
-## 4. Recommendations
-| # | Action | Why | Effort | Impact | Timing |
-Timing: This week · 30 days · Ongoing.
-
-## 5. Methodology & limitations
-Bullets: tools used, what was not checked, AI answers vary by session/model.
-
-## Appendix
-Prompt list · user-provided AI answers.
+    <div class="foot">{{PLUGIN_NAME}} · {{FOOTER_NOTE}}</div>
+  </main>
+</body>
+</html>
 ```
