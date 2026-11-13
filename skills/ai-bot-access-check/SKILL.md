@@ -46,4 +46,12 @@ Some Claude apps only open URLs that appear in the conversation or in search res
 
 ## Branded report
 
-If the environment can render HTML artifacts or files, deliver the full report using `references/report-template.md` (fill the placeholders, keep the design and colours; use the score ring for the main score and status chips for pass / warn / fail / not checked). Otherwise use the markdown format above. Keep the chat reply to a short summary either way.
+If the environment can render HTML artifacts or files, present the full report as a static HTML page (no scripts) in the house style below; otherwise use the markdown format above. Keep the chat reply to a short summary either way.
+
+House style:
+- Header band with a diagonal gradient from deep navy #1C1E4E to teal #0E7480, white text: small uppercase plugin name with a gold ✦ (#FFC448), the report title, then subject and date.
+- Light background #F6F7FB; content in white cards with a thin #E3E6EF border and rounded corners (about 16 px).
+- Summary card first: a circular score ring (teal arc proportional to the score, number in the centre in navy), the verdict and 2–3 key points.
+- Status chips as small rounded labels: green #1F9D63 pass, amber #E0A000 warning, red #D64545 fail, grey #8A90A2 not checked.
+- Tables with muted header text #5B6275 and thin row lines; evidence in small monospace.
+- Footer line with the plugin name.

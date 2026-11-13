@@ -36,4 +36,6 @@ Ask which ones the user wants (default: the first four):
 
 ## Branded document
 
-Start the deliverable with the header block from `references/doc-template.md` and follow its structure. When the environment can render HTML artifacts or files, deliver it with the HTML version of that template; when delivering as a document artifact or markdown, use the header block and the same section structure.
+Start the deliverable with a header block, translated into the document language: plugin name with ✦, document title, then subject · version · date · owner · status (draft or current). Follow with a 2–3 line summary and numbered sections; use tables for structured content and code blocks for anything to paste.
+
+If the environment can render HTML artifacts or files, present it as a static HTML page (no scripts) in the house style: header band with a navy #1C1E4E to teal #0E7480 gradient and white text, meta details as small rounded pills, light background #F6F7FB, white rounded cards with a #E3E6EF border, summary card with a gold #FFC448 left accent, dark code blocks. Otherwise deliver the same structure as a document artifact or markdown.
