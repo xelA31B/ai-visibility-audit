@@ -8,7 +8,7 @@ Status classes: `ok` (pass / install), `warn` (conditions / partial), `bad` (fai
 <!DOCTYPE html>
 <!--
   Branded report template (xelA31B plugin family). Static HTML and CSS only.
-  Fill the {{PLACEHOLDERS}}; repeat the marked rows as needed; keep the design tokens.
+  Fill the {{PLACEHOLDERS}}; repeat the marked rows as needed; keep the design.
   Status classes: ok (pass/install), warn (conditions), bad (fail/do not install), na (not available).
 -->
 <html lang="{{LANG}}">
@@ -64,7 +64,7 @@ Status classes: `ok` (pass / install), `warn` (conditions / partial), `bad` (fai
         <div>{{ONE_LINE_REASON}}</div>
         <ul>
           <!-- repeat: key point -->
-          <li>{{KEY_POINT}}</li>
+          <li>{{MAIN_POINT}}</li>
         </ul>
       </div>
     </section>
