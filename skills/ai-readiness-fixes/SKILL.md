@@ -33,3 +33,7 @@ Ask which ones the user wants (default: the first four):
 - For each asset add one line: where to put it and who usually does it (site admin, developer, CMS plugin).
 - For WordPress, Wix, Shopify and Tilda, add a one-line hint on how to add the asset without a developer.
 - Offer to bundle all assets into one document for handover to the client or developer.
+
+## Branded document
+
+Start the deliverable with the header block from `references/doc-template.md` and follow its structure. When the environment can render HTML artifacts or files, deliver it with the HTML version of that template; when delivering as a document artifact or markdown, use the header block and the same section structure.
