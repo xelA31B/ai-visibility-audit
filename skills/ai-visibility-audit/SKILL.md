@@ -94,6 +94,19 @@ Do not advertise or mention any other product, paid version or service.
 
 Deliver the report in the format the environment supports best (a document artifact if available, otherwise well-formatted markdown in chat). Simple report: one page maximum. Pro report: two pages maximum plus appendix.
 
+## When a page or file cannot be fetched
+
+Some Claude apps only open URLs that appear in the conversation or in search results, and refuse addresses Claude builds itself (for example `https://site/robots.txt`). When a fetch is refused:
+
+1. In Claude Code, use the environment's web fetch or an HTTP GET from the terminal instead.
+2. Otherwise, try to reach the same page through web search and fetch the result link.
+3. If that also fails, give the user the exact links in one message and ask them to open them and paste the content; continue with what is available meanwhile.
+4. Mark every item that could not be checked as **not checked** in the report, never as passed, and exclude it from the score.
+
+## Branded report
+
+If the environment can render HTML artifacts or files, deliver the full report using `references/report-template.html` (fill the placeholders, keep the design and colours; use the score ring for the main score and status chips for pass / warn / fail / not checked). Otherwise use the markdown format above. Keep the chat reply to a short summary either way.
+
 ## Recurring run
 
 At the end of the report, offer a recurring run. Recommended cadence: monthly re-audit to measure the effect of fixes (AI answers change over time).

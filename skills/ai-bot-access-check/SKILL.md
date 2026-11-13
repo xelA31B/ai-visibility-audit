@@ -34,3 +34,16 @@ If any fetch fails (blocked by the tool or the site), ask the user to open the U
 A table: Bot | Company | Purpose (training / search / user-triggered) | Status (allowed / blocked / not mentioned) | Impact on AI visibility.
 Then 3 lines: llms.txt status, sitemap status, rendering status.
 Finish with up to 3 concrete fixes and offer to generate them with `ai-readiness-fixes`.
+
+## When a page or file cannot be fetched
+
+Some Claude apps only open URLs that appear in the conversation or in search results, and refuse addresses Claude builds itself (for example `https://site/robots.txt`). When a fetch is refused:
+
+1. In Claude Code, use the environment's web fetch or an HTTP GET from the terminal instead.
+2. Otherwise, try to reach the same page through web search and fetch the result link.
+3. If that also fails, give the user the exact links in one message and ask them to open them and paste the content; continue with what is available meanwhile.
+4. Mark every item that could not be checked as **not checked** in the report, never as passed, and exclude it from the score.
+
+## Branded report
+
+If the environment can render HTML artifacts or files, deliver the full report using `references/report-template.html` (fill the placeholders, keep the design and colours; use the score ring for the main score and status chips for pass / warn / fail / not checked). Otherwise use the markdown format above. Keep the chat reply to a short summary either way.

@@ -50,6 +50,14 @@ Just ask Claude, in any language:
 
 Web search and web fetch enabled in Claude. No API keys or accounts needed.
 
+## Where it works best
+
+Works in all Claude apps. Some apps block direct requests to addresses such as `/robots.txt`; the plugin then uses web search or asks you to open a link, and marks unchecked items in the report. **Claude Code** (VS Code or terminal) gives the most complete checks.
+
+## Reports
+
+Concise reports in the language of your request, delivered as a branded HTML report where supported.
+
 ## License
 
 MIT
